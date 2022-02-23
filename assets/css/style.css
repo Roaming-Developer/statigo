@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffcf8;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+.main::before {
+  position: absolute;
+  content: "statigo";
+  font-size: 2rem;
+  color: #dadada;
+  z-index: 1;
+  left: 2rem;
+  bottom: 1rem;
+  animation: colored 2s infinite;
+}
+
+@keyframes colored {
+  50% {
+    color: #3b3b3b;
+  }
+}
+
+.the-scream {
+  cursor: pointer;
+}
+
+.the-scream,
+.content {
+  width: 25vw;
+  z-index: 2;
+}
+
+p,
+.content {
+  margin: 0.5rem 0rem;
+  text-align: justify;
+}
+
+@media screen and (max-width: 420px) {
+  .the-scream,
+  .content {
+    width: 80vw;
+  }
+}
